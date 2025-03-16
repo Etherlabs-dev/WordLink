@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Association Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Word Association Game</h1>
+            <p>Type a word associated with the prompt before time runs out!</p>
+        </header>
+
+        <div class="score-container">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="high-score">High Score: <span id="high-score">0</span></div>
+        </div>
+
+        <div class="game-container">
+            <div class="timer-container">
+                <div class="timer-bar" id="timer-bar"></div>
+                <div class="timer-text">Time: <span id="timer">30</span>s</div>
+            </div>
+
+            <div class="prompt-section">
+                <p>The prompt is:</p>
+                <div id="prompt-word" class="prompt-word">apple</div>
+            </div>
+
+            <div class="input-section">
+                <input type="text" id="word-input" placeholder="Type an associated word..." autofocus>
+                <button id="submit-btn">Submit</button>
+            </div>
+
+            <div class="feedback" id="feedback"></div>
+
+            <div class="history-container">
+                <h3>Word History</h3>
+                <ul id="word-history"></ul>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn">Start New Game</button>
+            <div class="difficulty">
+                <p>Difficulty:</p>
+                <button class="difficulty-btn active" data-seconds="30">Easy</button>
+                <button class="difficulty-btn" data-seconds="20">Medium</button>
+                <button class="difficulty-btn" data-seconds="10">Hard</button>
+            </div>
+        </div>
+
+        <div class="modal" id="game-over-modal">
+            <div class="modal-content">
+                <h2>Game Over!</h2>
+                <p>Your final score: <span id="final-score">0</span></p>
+                <button id="play-again-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
